@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --white: #F8F4F9;
+    --light-blue: #58A4B0;
+    --dark-blue: #414361;
+    --darker-blue: #2A2D43;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: var(--montserrat);
+    background-color: var(--white);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+table{
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tr:hover{
+    background-color: var(--light-blue);
+}
+
+main h1{
+    text-align: center;
+}
+
+#openBtnDiv{
+    display: flex;
+    gap: 1rem;
+}
+
+.openBtn{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.openBtn:hover{
+    cursor: pointer;
+    background-color: var(--light-blue);
+    color: white;
+}
+
+#new-contact, #edit-contact, #remove-contact{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem;
+    border-radius: 20px;
+    background-color: var(--light-blue);
+}
+
+.userInput{
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.userInputBtn{
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+    border: none;
+    width: 80px;
+}
+
+.userInputBtn:hover{
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+footer p{
+    text-align: center;
+    font-size: .8em;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}

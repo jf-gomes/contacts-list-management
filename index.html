@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts List | JF Gomes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Contacts List</h1>
+        <table id="table">
+            <thead>
+                <td>ID</td>
+                <td>Name</td>
+                <td>E-mail</td>
+                <td>Phone</td>
+            </thead>
+        </table>
+        <div id="openBtnDiv">
+            <button onclick="data.open('add')" class="openBtn">Add a contact</button>
+            <button onclick="data.open('edit')" class="openBtn">Edit a contact</button>
+            <button onclick="data.open('remove')" class="openBtn">Remove a contact</button>
+        </div>
+        <div id="new-contact">
+            <h2>Add a new contact</h2>
+            <input type="text" name="newContactNameInput" id="newContactNameInput" placeholder="Name" class="userInput">
+            <input type="email" name="newContactEmailInput" id="newContactEmailInput" placeholder="E-mail" class="userInput">
+            <input type="text" name="newContactPhoneInput" id="newContactPhoneInput" placeholder="Phone" class="userInput">
+            <div>
+                <input type="button" value="Add" onclick="data.add()" class="userInputBtn">
+                <input type="button" value="Cancel" onclick="data.close('add')" class="userInputBtn">
+            </div>
+        </div>
+        <div id="edit-contact">
+            <h2>Edit a contact</h2>
+            <input type="number" name="idToEdit" id="idToEdit" placeholder="ID" class="userInput" onblur="data.idToEditVerify()">
+            <input type="text" name="editContactNameInput" id="editContactNameInput" placeholder="Name" class="userInput">
+            <input type="email" name="editContactEmailInput" id="editContactEmailInput" placeholder="E-mail" class="userInput">
+            <input type="text" name="editContactPhoneInput" id="editContactPhoneInput" placeholder="Phone" class="userInput">
+            <div>
+                <input type="button" value="Edit" onclick="data.edit()" class="userInputBtn">
+                <input type="button" value="Cancel" onclick="data.close('edit')" class="userInputBtn">
+            </div>
+        </div>
+        <div id="remove-contact">
+            <h2>Remove a contact</h2>
+            <input type="number" name="idToRemove" id="idToRemove" placeholder="ID" class="userInput">
+            <div>
+                <input type="button" value="Remove" onclick="data.remove()" class="userInputBtn">
+                <input type="button" value="Cancel" onclick="data.close('remove')" class="userInputBtn">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Developed by <a href="https://jf-gomes.github.io/personal-website/" target="_blank">João Víctor Feitosa Gomes</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
